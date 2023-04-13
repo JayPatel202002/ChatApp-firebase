@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+
 const NavBar = () => {
   const [user] = useAuthState(auth);
 
   const googleSignIn = () => {
-    const provider = new GoogleAuthProvider;
+    const provider = new GoogleAuthProvider();
     signInWithRedirect(auth, provider);
   };
 
