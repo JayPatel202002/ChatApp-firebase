@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
 const NavBar = () => {
-  const [user] = useAuthState(auth);
+const [user] = useAuthState(auth);
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
