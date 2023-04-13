@@ -3,7 +3,7 @@ import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 const NavBar = () => {
-  const [user] = useAuthState(user);
+  const [user] = useAuthState(auth);
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider;
